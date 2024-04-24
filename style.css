@@ -1,0 +1,71 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #fbd4d4;
+}
+
+nav {
+    background-color: #99d8ff;
+}
+
+section {
+    background-color: #eaffbd;
+}
+
+article {
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: #f5dcf3;
+}
+
+.grid-wrapper>* {
+    min-height: 100px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 240px 1fr;
+    gap: 1rem;
+}
+
+header {
+    grid-column: 1 / -1;
+    /* grid-row: 1 / 2; */
+    grid-row: 1;
+}
+
+nav {
+    /* grid-row: 2 / 5; */
+    grid-row: 2 / -2;
+}
+
+section {
+    grid-column: 2 / -1;
+}
+
+footer {
+    grid-column: 1 / -1;
+    grid-row: -2 / -1;
+}
+
+.grid-wrapper>main {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+article {
+    min-height: 100px;
+    border-radius: 4px;
+}
